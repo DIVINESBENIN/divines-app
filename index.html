@@ -14,71 +14,98 @@
       font-family: Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background: #111111;
+      background: #0d0d0d;
       color: white;
     }
 
     header {
+      padding: 45px 20px;
       text-align: center;
-      padding: 35px 20px;
-      background: linear-gradient(135deg, #111111, #2b2110);
+      background: linear-gradient(135deg, #0d0d0d, #2b2110);
+      border-bottom: 1px solid #5c4816;
     }
 
     .logo {
-      font-size: 32px;
-      font-weight: bold;
       color: #d4af37;
+      font-size: 34px;
+      font-weight: bold;
       letter-spacing: 2px;
     }
 
     header p {
-      margin-top: 10px;
-      color: #eeeeee;
+      margin-top: 12px;
+      color: #dddddd;
     }
 
     .container {
-      padding: 20px;
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 35px 15px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+      color: #d4af37;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #cccccc;
+      line-height: 1.6;
     }
 
     .card {
-      background: #1c1c1c;
+      background: #181818;
       border: 1px solid #5c4816;
       border-radius: 18px;
       padding: 25px;
       margin-bottom: 20px;
-      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
     }
 
     .card h2 {
       color: #d4af37;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .card p {
       color: #cccccc;
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 18px;
     }
 
-    button {
+    button,
+    .whatsapp {
+      display: inline-block;
       border: none;
       padding: 13px 20px;
       border-radius: 10px;
       background: #d4af37;
       color: #111111;
       font-weight: bold;
+      text-decoration: none;
       cursor: pointer;
+      margin-top: 5px;
     }
 
-    button:hover {
+    button:hover,
+    .whatsapp:hover {
       opacity: 0.9;
     }
 
     .menu {
       display: none;
+      margin-top: 10px;
     }
 
     .menu h2 {
@@ -88,7 +115,7 @@
     }
 
     .produit {
-      background: #1c1c1c;
+      background: #202020;
       padding: 16px;
       margin-bottom: 10px;
       border-radius: 12px;
@@ -105,6 +132,28 @@
     .prix {
       color: #d4af37;
       font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .services {
+      display: grid;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .service {
+      background: #202020;
+      padding: 15px;
+      border-radius: 10px;
+      color: #eeeeee;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 8px;
     }
 
     footer {
@@ -112,6 +161,13 @@
       padding: 30px 15px;
       color: #999999;
       font-size: 13px;
+      border-top: 1px solid #292929;
+      margin-top: 20px;
+    }
+
+    .signature {
+      color: #d4af37;
+      margin-top: 8px;
     }
   </style>
 </head>
@@ -125,123 +181,184 @@
 
   <main class="container">
 
-    <div class="card">
-      <h2>🎨 DIVINE'S ARTS</h2>
+    <section class="hero">
+      <h1>Bienvenue chez DIVINE'S</h1>
       <p>
-        Création graphique, design, communication digitale,
-        retouche photo et services numériques.
+        Une même application pour découvrir
+        <strong>DIVINE'S ARTS</strong> et
+        <strong>DIVINE'S CAFÉ</strong>.
       </p>
-      <button onclick="alert('La section DIVINE\\'S ARTS sera bientôt disponible.')">
-        Découvrir DIVINE'S ARTS
-      </button>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>☕ DIVINE'S CAFÉ</h2>
+    <section class="card">
+      <h2>🎨 DIVINE'S ARTS</h2>
+
       <p>
-        Découvrez notre menu et préparez votre commande.
+        Créativité, design et solutions digitales pour particuliers,
+        entrepreneurs et entreprises.
       </p>
+
+      <div class="services">
+        <div class="service">🎨 Création de flyers et affiches</div>
+        <div class="service">📄 Création et amélioration de CV</div>
+        <div class="service">📸 Retouche et amélioration photo</div>
+        <div class="service">🤖 Création d'images avec l'IA</div>
+        <div class="service">🌐 Communication digitale</div>
+        <div class="service">✍️ Correction et traduction</div>
+      </div>
+
+      <a class="whatsapp"
+         href="https://wa.me/2290144512144"
+         target="_blank">
+        📲 Contacter DIVINE'S ARTS
+      </a>
+    </section>
+
+    <section class="card">
+      <h2>☕ DIVINE'S CAFÉ</h2>
+
+      <p>
+        Petit-déjeuner, déjeuner et repas à emporter.
+        Commande sur place ou contactez-nous directement.
+      </p>
+
       <button onclick="afficherMenu()">
         Voir le menu
       </button>
-    </div>
 
-    <section id="menu" class="menu">
+      <section id="menu" class="menu">
 
-      <h2>☕ MENU DIVINE'S CAFÉ</h2>
+        <h2>☕ MENU DIVINE'S CAFÉ</h2>
 
-      <div class="produit">
-        <strong>Thé gingembre-citron-miel</strong>
-        <span class="prix">500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Thé gingembre-citron-miel</strong>
+          <span class="prix">500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Thé vert</strong>
-        <span class="prix">300 F</span>
-      </div>
+        <div class="produit">
+          <strong>Thé vert</strong>
+          <span class="prix">300 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Chocolat chaud</strong>
-        <span class="prix">300 F</span>
-      </div>
+        <div class="produit">
+          <strong>Chocolat chaud</strong>
+          <span class="prix">300 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Café chaud</strong>
-        <span class="prix">300 F</span>
-      </div>
+        <div class="produit">
+          <strong>Café chaud</strong>
+          <span class="prix">300 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Sandwich viande hachée</strong>
-        <span class="prix">500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Sandwich viande hachée</strong>
+          <span class="prix">500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Jambon-fromage</strong>
-        <span class="prix">700 F</span>
-      </div>
+        <div class="produit">
+          <strong>Jambon-fromage</strong>
+          <span class="prix">700 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Pain omelette</strong>
-        <span class="prix">500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Pain omelette</strong>
+          <span class="prix">500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Salade d'avocat</strong>
-        <span class="prix">1 000 F</span>
-      </div>
+        <div class="produit">
+          <strong>Salade d'avocat</strong>
+          <span class="prix">1 000 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Spaghetti</strong>
-        <span class="prix">1 000 F</span>
-      </div>
+        <div class="produit">
+          <strong>Spaghetti</strong>
+          <span class="prix">1 000 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Coquillettes</strong>
-        <span class="prix">1 000 F</span>
-      </div>
+        <div class="produit">
+          <strong>Coquillettes</strong>
+          <span class="prix">1 000 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Piron aileron</strong>
-        <span class="prix">1 500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Piron aileron</strong>
+          <span class="prix">1 500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Pâte rouge aileron</strong>
-        <span class="prix">1 500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Pâte rouge aileron</strong>
+          <span class="prix">1 500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Riz sauce poisson</strong>
-        <span class="prix">1 500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Riz sauce poisson</strong>
+          <span class="prix">1 500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Couscous aileron</strong>
-        <span class="prix">1 500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Couscous aileron</strong>
+          <span class="prix">1 500 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Pâte légumes</strong>
-        <span class="prix">2 000 F</span>
-      </div>
+        <div class="produit">
+          <strong>Pâte légumes</strong>
+          <span class="prix">2 000 F</span>
+        </div>
 
-      <div class="produit">
-        <strong>Akassa légumes</strong>
-        <span class="prix">1 500 F</span>
-      </div>
+        <div class="produit">
+          <strong>Akassa légumes</strong>
+          <span class="prix">1 500 F</span>
+        </div>
 
+        <br>
+
+        <a class="whatsapp"
+           href="https://wa.me/2290144512144?text=Bonjour%20DIVINE'S%20CAF%C3%89%2C%20je%20souhaite%20passer%20une%20commande."
+           target="_blank">
+          📲 Commander sur WhatsApp
+        </a>
+
+      </section>
+    </section>
+
+    <section class="card contact">
+      <h2>📞 CONTACT</h2>
+
+      <p>WhatsApp : <strong>+229 01 44 51 21 44</strong></p>
+
+      <p>DIVINE'S CAFÉ</p>
+
+      <p>
+        📍 Derrière le Stade de l'Amitié Mathieu Kérékou
+      </p>
+
+      <p>
+        🕐 Ouvert tous les jours
+      </p>
+
+      <a class="whatsapp"
+         href="https://wa.me/2290144512144"
+         target="_blank">
+        💬 Nous écrire sur WhatsApp
+      </a>
     </section>
 
   </main>
 
   <footer>
     © 2026 DIVINE'S ARTS & DIVINE'S CAFÉ
+
+    <div class="signature">
+      Créativité • Digital • Impact
+    </div>
   </footer>
 
   <script>
     function afficherMenu() {
       const menu = document.getElementById("menu");
+
       menu.style.display = "block";
+
       menu.scrollIntoView({
         behavior: "smooth"
       });
@@ -249,4 +366,4 @@
   </script>
 
 </body>
-  </html>
+          </html>
