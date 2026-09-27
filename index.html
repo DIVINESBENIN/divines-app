@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DIVINE'S APP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111111;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px;
+      background: linear-gradient(135deg, #111111, #2b2110);
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #d4af37;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #eeeeee;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1c1c1c;
+      border: 1px solid #5c4816;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #cccccc;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    button {
+      border: none;
+      padding: 13px 20px;
+      border-radius: 10px;
+      background: #d4af37;
+      color: #111111;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .menu h2 {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+
+    .produit {
+      background: #1c1c1c;
+      padding: 16px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .produit strong {
+      color: white;
+    }
+
+    .prix {
+      color: #d4af37;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #999999;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">DIVINE'S APP</div>
+    <p>Créativité • Digital • Restauration</p>
+  </header>
+
+  <main class="container">
+
+    <div class="card">
+      <h2>🎨 DIVINE'S ARTS</h2>
+      <p>
+        Création graphique, design, communication digitale,
+        retouche photo et services numériques.
+      </p>
+      <button onclick="alert('La section DIVINE\\'S ARTS sera bientôt disponible.')">
+        Découvrir DIVINE'S ARTS
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>☕ DIVINE'S CAFÉ</h2>
+      <p>
+        Découvrez notre menu et préparez votre commande.
+      </p>
+      <button onclick="afficherMenu()">
+        Voir le menu
+      </button>
+    </div>
+
+    <section id="menu" class="menu">
+
+      <h2>☕ MENU DIVINE'S CAFÉ</h2>
+
+      <div class="produit">
+        <strong>Thé gingembre-citron-miel</strong>
+        <span class="prix">500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Thé vert</strong>
+        <span class="prix">300 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Chocolat chaud</strong>
+        <span class="prix">300 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Café chaud</strong>
+        <span class="prix">300 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Sandwich viande hachée</strong>
+        <span class="prix">500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Jambon-fromage</strong>
+        <span class="prix">700 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Pain omelette</strong>
+        <span class="prix">500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Salade d'avocat</strong>
+        <span class="prix">1 000 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Spaghetti</strong>
+        <span class="prix">1 000 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Coquillettes</strong>
+        <span class="prix">1 000 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Piron aileron</strong>
+        <span class="prix">1 500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Pâte rouge aileron</strong>
+        <span class="prix">1 500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Riz sauce poisson</strong>
+        <span class="prix">1 500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Couscous aileron</strong>
+        <span class="prix">1 500 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Pâte légumes</strong>
+        <span class="prix">2 000 F</span>
+      </div>
+
+      <div class="produit">
+        <strong>Akassa légumes</strong>
+        <span class="prix">1 500 F</span>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 DIVINE'S ARTS & DIVINE'S CAFÉ
+  </footer>
+
+  <script>
+    function afficherMenu() {
+      const menu = document.getElementById("menu");
+      menu.style.display = "block";
+      menu.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+</body>
+  </html>
