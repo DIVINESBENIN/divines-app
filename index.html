@@ -193,4 +193,569 @@
     }
 
     .total span:last-child {
-      color: #
+      color: #d4af37;
+    }
+
+    .formulaire {
+      margin-top: 20px;
+    }
+
+    .formulaire label {
+      display: block;
+      color: #cccccc;
+      margin: 12px 0 6px;
+    }
+
+    .formulaire input,
+    .formulaire select {
+      width: 100%;
+      padding: 13px;
+      border-radius: 9px;
+      border: 1px solid #555;
+      background: #202020;
+      color: white;
+      outline: none;
+    }
+
+    .commande-btn {
+      width: 100%;
+      margin-top: 20px;
+      background: #d4af37;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #999999;
+      font-size: 13px;
+      border-top: 1px solid #292929;
+      margin-top: 20px;
+    }
+
+    .signature {
+      color: #d4af37;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 500px) {
+      .produit {
+        align-items: flex-start;
+      }
+
+      .quantite {
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DIVINE'S APP</div>
+  <p>Créativité • Digital • Restauration</p>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h1>Bienvenue chez DIVINE'S</h1>
+    <p>
+      Une même application pour découvrir
+      <strong>DIVINE'S ARTS</strong> et
+      <strong>DIVINE'S CAFÉ</strong>.
+    </p>
+  </section>
+
+  <section class="card">
+
+    <h2>🎨 DIVINE'S ARTS</h2>
+
+    <p>
+      Créativité, design et solutions digitales pour particuliers,
+      entrepreneurs et entreprises.
+    </p>
+
+    <div class="services">
+      <div class="service">🎨 Création de flyers et affiches</div>
+      <div class="service">📄 Création et amélioration de CV</div>
+      <div class="service">📸 Retouche et amélioration photo</div>
+      <div class="service">🤖 Création d'images avec l'IA</div>
+      <div class="service">🌐 Communication digitale</div>
+      <div class="service">✍️ Correction et traduction</div>
+    </div>
+
+    <br>
+
+    <a class="whatsapp"
+       href="https://wa.me/2290144512144"
+       target="_blank">
+      📲 Contacter DIVINE'S ARTS
+    </a>
+
+  </section>
+
+  <section class="card">
+
+    <h2>☕ DIVINE'S CAFÉ</h2>
+
+    <p>
+      Choisissez vos produits, indiquez les quantités
+      et envoyez directement votre commande sur WhatsApp.
+    </p>
+
+    <div class="menu">
+
+      <h2>MENU</h2>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Thé gingembre-citron-miel</strong>
+          <span class="prix">500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(0, -1)">−</button>
+          <span class="nombre" id="q0">0</span>
+          <button onclick="modifierQuantite(0, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Thé vert</strong>
+          <span class="prix">300 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(1, -1)">−</button>
+          <span class="nombre" id="q1">0</span>
+          <button onclick="modifierQuantite(1, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Chocolat chaud</strong>
+          <span class="prix">300 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(2, -1)">−</button>
+          <span class="nombre" id="q2">0</span>
+          <button onclick="modifierQuantite(2, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Café chaud</strong>
+          <span class="prix">300 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(3, -1)">−</button>
+          <span class="nombre" id="q3">0</span>
+          <button onclick="modifierQuantite(3, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Sandwich viande hachée</strong>
+          <span class="prix">500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(4, -1)">−</button>
+          <span class="nombre" id="q4">0</span>
+          <button onclick="modifierQuantite(4, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Jambon-fromage</strong>
+          <span class="prix">700 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(5, -1)">−</button>
+          <span class="nombre" id="q5">0</span>
+          <button onclick="modifierQuantite(5, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Pain omelette</strong>
+          <span class="prix">500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(6, -1)">−</button>
+          <span class="nombre" id="q6">0</span>
+          <button onclick="modifierQuantite(6, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Salade d'avocat</strong>
+          <span class="prix">1 000 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(7, -1)">−</button>
+          <span class="nombre" id="q7">0</span>
+          <button onclick="modifierQuantite(7, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Spaghetti</strong>
+          <span class="prix">1 000 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(8, -1)">−</button>
+          <span class="nombre" id="q8">0</span>
+          <button onclick="modifierQuantite(8, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Coquillettes</strong>
+          <span class="prix">1 000 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(9, -1)">−</button>
+          <span class="nombre" id="q9">0</span>
+          <button onclick="modifierQuantite(9, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Piron aileron</strong>
+          <span class="prix">1 500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(10, -1)">−</button>
+          <span class="nombre" id="q10">0</span>
+          <button onclick="modifierQuantite(10, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Pâte rouge aileron</strong>
+          <span class="prix">1 500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(11, -1)">−</button>
+          <span class="nombre" id="q11">0</span>
+          <button onclick="modifierQuantite(11, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Riz sauce poisson</strong>
+          <span class="prix">1 500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(12, -1)">−</button>
+          <span class="nombre" id="q12">0</span>
+          <button onclick="modifierQuantite(12, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Couscous aileron</strong>
+          <span class="prix">1 500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(13, -1)">−</button>
+          <span class="nombre" id="q13">0</span>
+          <button onclick="modifierQuantite(13, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Pâte légumes</strong>
+          <span class="prix">2 000 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(14, -1)">−</button>
+          <span class="nombre" id="q14">0</span>
+          <button onclick="modifierQuantite(14, 1)">+</button>
+        </div>
+      </div>
+
+      <div class="produit">
+        <div class="produit-info">
+          <strong>Akassa légumes</strong>
+          <span class="prix">1 500 F</span>
+        </div>
+        <div class="quantite">
+          <button onclick="modifierQuantite(15, -1)">−</button>
+          <span class="nombre" id="q15">0</span>
+          <button onclick="modifierQuantite(15, 1)">+</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="panier">
+
+      <h3>🛒 Ma commande</h3>
+
+      <div id="resume">
+        Aucun produit sélectionné.
+      </div>
+
+      <div class="total">
+        <span>Total</span>
+        <span id="total">0 F</span>
+      </div>
+
+      <div class="formulaire">
+
+        <label for="nom">Votre nom</label>
+        <input
+          type="text"
+          id="nom"
+          placeholder="Ex : Steevy"
+        >
+
+        <label for="telephone">Votre numéro</label>
+        <input
+          type="tel"
+          id="telephone"
+          placeholder="Ex : 01 44 51 21 44"
+        >
+
+        <label for="mode">Mode de commande</label>
+
+        <select id="mode">
+          <option value="Sur place">Sur place</option>
+          <option value="À emporter">À emporter</option>
+          <option value="Livraison">Livraison</option>
+        </select>
+
+        <label for="adresse">Adresse de livraison</label>
+
+        <input
+          type="text"
+          id="adresse"
+          placeholder="Obligatoire pour une livraison"
+        >
+
+        <button
+          class="commande-btn"
+          onclick="envoyerCommande()">
+          📲 Commander sur WhatsApp
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="card contact">
+
+    <h2>📞 CONTACT</h2>
+
+    <p>WhatsApp : <strong>+229 01 44 51 21 44</strong></p>
+
+    <p>📍 Derrière le Stade de l'Amitié Mathieu Kérékou</p>
+
+    <p>🕐 Ouvert tous les jours</p>
+
+    <br>
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/2290144512144"
+      target="_blank">
+      💬 Nous écrire sur WhatsApp
+    </a>
+
+  </section>
+
+</main>
+
+<footer>
+
+  © 2026 DIVINE'S ARTS & DIVINE'S CAFÉ
+
+  <div class="signature">
+    Créativité • Digital • Impact
+  </div>
+
+</footer>
+
+<script>
+
+const produits = [
+  ["Thé gingembre-citron-miel", 500],
+  ["Thé vert", 300],
+  ["Chocolat chaud", 300],
+  ["Café chaud", 300],
+  ["Sandwich viande hachée", 500],
+  ["Jambon-fromage", 700],
+  ["Pain omelette", 500],
+  ["Salade d'avocat", 1000],
+  ["Spaghetti", 1000],
+  ["Coquillettes", 1000],
+  ["Piron aileron", 1500],
+  ["Pâte rouge aileron", 1500],
+  ["Riz sauce poisson", 1500],
+  ["Couscous aileron", 1500],
+  ["Pâte légumes", 2000],
+  ["Akassa légumes", 1500]
+];
+
+let quantites = new Array(produits.length).fill(0);
+
+function modifierQuantite(index, changement) {
+
+  quantites[index] += changement;
+
+  if (quantites[index] < 0) {
+    quantites[index] = 0;
+  }
+
+  document.getElementById("q" + index).textContent =
+    quantites[index];
+
+  actualiserPanier();
+}
+
+function actualiserPanier() {
+
+  let total = 0;
+  let texte = "";
+
+  for (let i = 0; i < produits.length; i++) {
+
+    if (quantites[i] > 0) {
+
+      let sousTotal =
+        produits[i][1] * quantites[i];
+
+      total += sousTotal;
+
+      texte +=
+        quantites[i] +
+        " × " +
+        produits[i][0] +
+        " = " +
+        sousTotal.toLocaleString("fr-FR") +
+        " F<br>";
+    }
+  }
+
+  if (texte === "") {
+    texte = "Aucun produit sélectionné.";
+  }
+
+  document.getElementById("resume").innerHTML = texte;
+
+  document.getElementById("total").textContent =
+    total.toLocaleString("fr-FR") + " F";
+}
+
+function envoyerCommande() {
+
+  let nom =
+    document.getElementById("nom").value.trim();
+
+  let telephone =
+    document.getElementById("telephone").value.trim();
+
+  let mode =
+    document.getElementById("mode").value;
+
+  let adresse =
+    document.getElementById("adresse").value.trim();
+
+  let total = 0;
+  let commande = "";
+
+  for (let i = 0; i < produits.length; i++) {
+
+    if (quantites[i] > 0) {
+
+      let sousTotal =
+        produits[i][1] * quantites[i];
+
+      total += sousTotal;
+
+      commande +=
+        "- " +
+        quantites[i] +
+        " × " +
+        produits[i][0] +
+        " : " +
+        sousTotal.toLocaleString("fr-FR") +
+        " F\n";
+    }
+  }
+
+  if (total === 0) {
+    alert("Veuillez sélectionner au moins un produit.");
+    return;
+  }
+
+  if (nom === "") {
+    alert("Veuillez entrer votre nom.");
+    return;
+  }
+
+  if (telephone === "") {
+    alert("Veuillez entrer votre numéro.");
+    return;
+  }
+
+  if (mode === "Livraison" && adresse === "") {
+    alert("Veuillez entrer votre adresse de livraison.");
+    return;
+  }
+
+  let message =
+    "Bonjour DIVINE'S CAFÉ 👋\n\n" +
+    "Je souhaite passer une commande.\n\n" +
+    "👤 Nom : " + nom + "\n" +
+    "📞 Téléphone : " + telephone + "\n" +
+    "📦 Mode : " + mode + "\n";
+
+  if (mode === "Livraison") {
+    message +=
+      "📍 Adresse : " + adresse + "\n";
+  }
+
+  message +=
+    "\n🛒 COMMANDE :\n" +
+    commande +
+    "\n💰 TOTAL : " +
+    total.toLocaleString("fr-FR") +
+    " F\n\n" +
+    "Merci DIVINE'S CAFÉ.";
+
+  let url =
+    "https://wa.me/2290144512144?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
