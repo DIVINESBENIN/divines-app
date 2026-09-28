@@ -1,0 +1,10 @@
+{
+  "name": "DIVINE'S APP",
+  "short_name": "DIVINE'S APP",
+  "start_url": "/divines-app/",
+  "display": "standalone",
+  "background_color": "#090909",
+  "theme_color": "#d4af37",
+  "description": "DIVINE'S ARTS & DIVINE'S CAFÉ",
+  "lang": "fr"
+}
