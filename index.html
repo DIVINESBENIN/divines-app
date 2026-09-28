@@ -97,4 +97,1078 @@ display:inline-block;
 width:max-content;
 margin-top:22px;
 padding:14px 20px;
-background:#
+background:#d4af37;
+color:#111;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* CARTES */
+
+.card{
+background:#151515;
+border:1px solid #443611;
+border-radius:20px;
+padding:20px;
+margin-bottom:20px;
+}
+
+.card h2{
+color:#d4af37;
+margin-bottom:12px;
+}
+
+.card p{
+color:#ccc;
+line-height:1.6;
+}
+
+/* ARTS */
+
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-top:18px;
+}
+
+.service{
+background:#202020;
+border-radius:12px;
+padding:14px;
+color:#eee;
+font-size:14px;
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:18px;
+padding:13px 18px;
+background:#d4af37;
+color:#111;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+}
+
+/* CATEGORIES */
+
+.categories{
+display:flex;
+gap:8px;
+overflow-x:auto;
+padding:5px 0 12px;
+margin-top:18px;
+}
+
+.categories button{
+white-space:nowrap;
+border:1px solid #d4af37;
+background:#171717;
+color:#d4af37;
+padding:10px 15px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.categories button.active{
+background:#d4af37;
+color:#111;
+}
+
+/* PRODUITS */
+
+.menu-item{
+background:#1b1b1b;
+border:1px solid #303030;
+border-radius:17px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+.product-visual{
+height:155px;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle,#4d3b14,#171717 65%);
+}
+
+.product-visual::before{
+content:"";
+position:absolute;
+width:150px;
+height:150px;
+border-radius:50%;
+border:1px solid rgba(212,175,55,.25);
+}
+
+.product-icon{
+font-size:70px;
+position:relative;
+filter:drop-shadow(0 8px 8px rgba(0,0,0,.5));
+}
+
+.item-content{
+padding:16px;
+}
+
+.item-top{
+display:flex;
+justify-content:space-between;
+gap:12px;
+align-items:flex-start;
+}
+
+.item-name{
+font-size:17px;
+font-weight:bold;
+line-height:1.3;
+}
+
+.price{
+color:#d4af37;
+font-weight:bold;
+white-space:nowrap;
+}
+
+.item-bottom{
+display:flex;
+justify-content:flex-end;
+margin-top:15px;
+}
+
+.quantity{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.quantity button{
+width:38px;
+height:38px;
+border:none;
+border-radius:9px;
+background:#d4af37;
+color:#111;
+font-size:21px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.number{
+min-width:25px;
+text-align:center;
+font-weight:bold;
+font-size:17px;
+}
+
+/* PANIER */
+
+.cart{
+background:#0d0d0d;
+border:1px solid #d4af37;
+border-radius:17px;
+padding:18px;
+margin-top:22px;
+}
+
+.cart h3{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.cart-line{
+display:flex;
+justify-content:space-between;
+gap:10px;
+padding:9px 0;
+border-bottom:1px solid #292929;
+color:#ddd;
+font-size:14px;
+}
+
+.cart-line strong{
+color:#d4af37;
+white-space:nowrap;
+}
+
+.total{
+display:flex;
+justify-content:space-between;
+font-size:21px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.total span:last-child{
+color:#d4af37;
+}
+
+/* FORMULAIRE */
+
+.form label{
+display:block;
+color:#ccc;
+margin:12px 0 6px;
+font-size:14px;
+}
+
+.form input,
+.form select{
+width:100%;
+padding:13px;
+border-radius:9px;
+border:1px solid #555;
+background:#202020;
+color:white;
+outline:none;
+}
+
+.order-button{
+width:100%;
+margin-top:20px;
+padding:16px;
+border:none;
+border-radius:10px;
+background:#d4af37;
+color:#111;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+/* PANIER FIXE */
+
+.bottom-cart{
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+z-index:1000;
+background:#111;
+border-top:1px solid #d4af37;
+padding:10px 14px;
+}
+
+.bottom-cart-inner{
+max-width:850px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+}
+
+.bottom-info{
+font-size:13px;
+color:#ddd;
+}
+
+.bottom-total{
+font-size:17px;
+font-weight:bold;
+color:#d4af37;
+}
+
+.bottom-button{
+background:#d4af37;
+color:#111;
+border:none;
+padding:11px 15px;
+border-radius:9px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin-bottom:8px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px 15px;
+color:#888;
+font-size:13px;
+border-top:1px solid #292929;
+margin-top:20px;
+}
+
+.signature{
+color:#d4af37;
+margin-top:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.services{
+grid-template-columns:1fr;
+}
+
+.hero{
+min-height:285px;
+}
+
+.hero h1{
+font-size:27px;
+}
+
+.product-visual{
+height:135px;
+}
+
+.product-icon{
+font-size:60px;
+}
+
+.item-top{
+align-items:flex-start;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">DIVINE'S APP</div>
+
+<p>Créativité • Digital • Restauration</p>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- ACCUEIL -->
+
+<section class="hero">
+
+<h1>Bienvenue chez DIVINE'S CAFÉ</h1>
+
+<p>
+Découvrez notre menu, choisissez vos produits
+et envoyez votre commande directement sur WhatsApp.
+</p>
+
+<a href="#menu-section" class="hero-button">
+🍽️ Commander maintenant
+</a>
+
+</section>
+
+
+<!-- DIVINE'S ARTS -->
+
+<section class="card">
+
+<h2>🎨 DIVINE'S ARTS</h2>
+
+<p>
+Créativité, design et solutions digitales pour
+particuliers, entrepreneurs et entreprises.
+</p>
+
+<div class="services">
+
+<div class="service">🎨 Flyers & affiches</div>
+
+<div class="service">📄 CV professionnels</div>
+
+<div class="service">📸 Retouche photo</div>
+
+<div class="service">🤖 Images avec IA</div>
+
+<div class="service">🌐 Communication digitale</div>
+
+<div class="service">✍️ Correction & traduction</div>
+
+</div>
+
+<a
+class="whatsapp"
+href="https://wa.me/2290144512144"
+target="_blank">
+
+📲 Contacter DIVINE'S ARTS
+
+</a>
+
+</section>
+
+
+<!-- CAFÉ -->
+
+<section class="card" id="menu-section">
+
+<h2>☕ DIVINE'S CAFÉ</h2>
+
+<p>
+Choisissez vos produits et ajoutez-les à votre commande.
+</p>
+
+
+<!-- CATEGORIES -->
+
+<div class="categories">
+
+<button
+class="active"
+onclick="filtrer('tous',this)">
+Tout
+</button>
+
+<button
+onclick="filtrer('the',this)">
+☕ Thé
+</button>
+
+<button
+onclick="filtrer('petit',this)">
+🥪 Petit-déjeuner
+</button>
+
+<button
+onclick="filtrer('plat',this)">
+🍛 Plats
+</button>
+
+</div>
+
+
+<!-- MENU -->
+
+<div id="menu"></div>
+
+
+<!-- PANIER -->
+
+<div class="cart">
+
+<h3>🛒 Ma commande</h3>
+
+<div id="resume">
+Aucun produit sélectionné.
+</div>
+
+<div class="total">
+
+<span>Total</span>
+
+<span id="total">0 F</span>
+
+</div>
+
+
+<div class="form">
+
+<label>Votre nom</label>
+
+<input
+type="text"
+id="nom"
+placeholder="Ex : Steevy"
+>
+
+
+<label>Votre numéro</label>
+
+<input
+type="tel"
+id="telephone"
+placeholder="Ex : 01 44 51 21 44"
+>
+
+
+<label>Mode de commande</label>
+
+<select id="mode">
+
+<option>Sur place</option>
+
+<option>À emporter</option>
+
+<option>Livraison</option>
+
+</select>
+
+
+<label>Adresse de livraison</label>
+
+<input
+type="text"
+id="adresse"
+placeholder="Obligatoire pour une livraison"
+>
+
+
+<button
+class="order-button"
+onclick="envoyerCommande()">
+
+📲 COMMANDER SUR WHATSAPP
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="card contact">
+
+<h2>📞 CONTACT</h2>
+
+<p>
+WhatsApp :
+<strong>+229 01 44 51 21 44</strong>
+</p>
+
+<p>
+📍 Derrière le Stade de l'Amitié Mathieu Kérékou
+</p>
+
+<p>
+🕐 Ouvert tous les jours
+</p>
+
+<a
+class="whatsapp"
+href="https://wa.me/2290144512144"
+target="_blank">
+
+💬 Nous écrire
+
+</a>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+© 2026 DIVINE'S ARTS & DIVINE'S CAFÉ
+
+<div class="signature">
+Créativité • Digital • Impact
+</div>
+
+</footer>
+
+
+<!-- PANIER FIXE -->
+
+<div class="bottom-cart">
+
+<div class="bottom-cart-inner">
+
+<div class="bottom-info">
+
+🛒 <span id="nbArticles">0</span> article(s)
+
+</div>
+
+<div class="bottom-total" id="bottomTotal">
+
+0 F
+
+</div>
+
+<button
+class="bottom-button"
+onclick="allerAuPanier()">
+
+Voir ma commande
+
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+
+const produits = [
+
+{
+nom:"Thé gingembre-citron-miel",
+prix:500,
+categorie:"the",
+emoji:"🍵"
+},
+
+{
+nom:"Thé vert",
+prix:300,
+categorie:"the",
+emoji:"🍵"
+},
+
+{
+nom:"Chocolat chaud",
+prix:300,
+categorie:"the",
+emoji:"☕"
+},
+
+{
+nom:"Café chaud",
+prix:300,
+categorie:"the",
+emoji:"☕"
+},
+
+{
+nom:"Sandwich viande hachée",
+prix:500,
+categorie:"petit",
+emoji:"🥪"
+},
+
+{
+nom:"Jambon-fromage",
+prix:700,
+categorie:"petit",
+emoji:"🥪"
+},
+
+{
+nom:"Pain omelette",
+prix:500,
+categorie:"petit",
+emoji:"🍳"
+},
+
+{
+nom:"Salade d'avocat",
+prix:1000,
+categorie:"petit",
+emoji:"🥑"
+},
+
+{
+nom:"Spaghetti",
+prix:1000,
+categorie:"plat",
+emoji:"🍝"
+},
+
+{
+nom:"Coquillettes",
+prix:1000,
+categorie:"plat",
+emoji:"🍝"
+},
+
+{
+nom:"Piron aileron",
+prix:1500,
+categorie:"plat",
+emoji:"🍛"
+},
+
+{
+nom:"Pâte rouge aileron",
+prix:1500,
+categorie:"plat",
+emoji:"🍛"
+},
+
+{
+nom:"Riz sauce poisson",
+prix:1500,
+categorie:"plat",
+emoji:"🍚"
+},
+
+{
+nom:"Couscous aileron",
+prix:1500,
+categorie:"plat",
+emoji:"🍛"
+},
+
+{
+nom:"Pâte légumes",
+prix:2000,
+categorie:"plat",
+emoji:"🍲"
+},
+
+{
+nom:"Akassa légumes",
+prix:1500,
+categorie:"plat",
+emoji:"🍲"
+}
+
+];
+
+
+let quantites =
+new Array(produits.length).fill(0);
+
+let categorieActuelle="tous";
+
+
+function afficherMenu(categorie="tous"){
+
+categorieActuelle=categorie;
+
+const menu=
+document.getElementById("menu");
+
+menu.innerHTML="";
+
+
+produits.forEach((produit,index)=>{
+
+if(
+categorie!=="tous" &&
+produit.categorie!==categorie
+){
+
+return;
+
+}
+
+
+menu.innerHTML += `
+
+<div class="menu-item">
+
+<div class="product-visual">
+
+<div class="product-icon">
+${produit.emoji}
+</div>
+
+</div>
+
+
+<div class="item-content">
+
+<div class="item-top">
+
+<div class="item-name">
+${produit.nom}
+</div>
+
+<div class="price">
+${produit.prix.toLocaleString("fr-FR")} F
+</div>
+
+</div>
+
+
+<div class="item-bottom">
+
+<div class="quantity">
+
+<button
+onclick="modifierQuantite(${index},-1)">
+−
+</button>
+
+<span
+class="number"
+id="q${index}">
+${quantites[index]}
+</span>
+
+<button
+onclick="modifierQuantite(${index},1)">
++
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+function filtrer(categorie,bouton){
+
+document
+.querySelectorAll(".categories button")
+.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+bouton.classList.add("active");
+
+afficherMenu(categorie);
+
+}
+
+
+function modifierQuantite(index,changement){
+
+quantites[index]+=changement;
+
+if(quantites[index]<0){
+
+quantites[index]=0;
+
+}
+
+afficherMenu(categorieActuelle);
+
+actualiserPanier();
+
+}
+
+
+function actualiserPanier(){
+
+let total=0;
+
+let nombreArticles=0;
+
+let texte="";
+
+
+produits.forEach((produit,index)=>{
+
+if(quantites[index]>0){
+
+let sousTotal=
+produit.prix*quantites[index];
+
+total+=sousTotal;
+
+nombreArticles+=quantites[index];
+
+
+texte+=`
+
+<div class="cart-line">
+
+<span>
+${quantites[index]} × ${produit.nom}
+</span>
+
+<strong>
+${sousTotal.toLocaleString("fr-FR")} F
+</strong>
+
+</div>
+
+`;
+
+}
+
+});
+
+
+if(texte===""){
+
+texte="Aucun produit sélectionné.";
+
+}
+
+
+document.getElementById("resume").innerHTML=
+texte;
+
+document.getElementById("total").textContent=
+total.toLocaleString("fr-FR")+" F";
+
+document.getElementById("nbArticles").textContent=
+nombreArticles;
+
+document.getElementById("bottomTotal").textContent=
+total.toLocaleString("fr-FR")+" F";
+
+}
+
+
+function allerAuPanier(){
+
+document
+.querySelector(".cart")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function envoyerCommande(){
+
+let nom=
+document.getElementById("nom")
+.value
+.trim();
+
+let telephone=
+document.getElementById("telephone")
+.value
+.trim();
+
+let mode=
+document.getElementById("mode")
+.value;
+
+let adresse=
+document.getElementById("adresse")
+.value
+.trim();
+
+
+let total=0;
+
+let commande="";
+
+
+produits.forEach((produit,index)=>{
+
+if(quantites[index]>0){
+
+let sousTotal=
+produit.prix*
+quantites[index];
+
+total+=sousTotal;
+
+commande+=
+"- "+
+quantites[index]+
+" × "+
+produit.nom+
+" : "+
+sousTotal.toLocaleString("fr-FR")+
+" F\n";
+
+}
+
+});
+
+
+if(total===0){
+
+alert(
+"Veuillez sélectionner au moins un produit."
+);
+
+return;
+
+}
+
+
+if(nom===""){
+
+alert(
+"Veuillez entrer votre nom."
+);
+
+return;
+
+}
+
+
+if(telephone===""){
+
+alert(
+"Veuillez entrer votre numéro."
+);
+
+return;
+
+}
+
+
+if(
+mode==="Livraison" &&
+adresse===""
+){
+
+alert(
+"Veuillez entrer votre adresse de livraison."
+);
+
+return;
+
+}
+
+
+let message=
+"Bonjour DIVINE'S CAFÉ 👋\n\n"+
+"Je souhaite passer une commande.\n\n"+
+"👤 Nom : "+nom+"\n"+
+"📞 Téléphone : "+telephone+"\n"+
+"📦 Mode : "+mode+"\n";
+
+
+if(mode==="Livraison"){
+
+message+=
+"📍 Adresse : "+
+adresse+
+"\n";
+
+}
+
+
+message+=
+"\n🛒 COMMANDE :\n"+
+commande+
+"\n💰 TOTAL : "+
+total.toLocaleString("fr-FR")+
+" F\n\n"+
+"Merci DIVINE'S CAFÉ.";
+
+
+let url=
+"https://wa.me/2290144512144?text="+
+encodeURIComponent(message);
+
+
+window.open(url,"_blank");
+
+}
+
+
+afficherMenu();
+
+actualiserPanier();
+
+</script>
+
+</body>
+  </html>
