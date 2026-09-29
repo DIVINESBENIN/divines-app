@@ -645,6 +645,11 @@ Calavi — Zone éloignée : 1 500 F
 <button
 class="order-button"
 onclick="envoyerCommande()">
+  <button
+class="order-button"
+onclick="payerCommande()">
+💳 PAYER MAINTENANT
+  </button>
 
 📲 COMMANDER SUR WHATSAPP
 
@@ -1049,7 +1054,74 @@ behavior:"smooth"
 });
 
 }
+async function payerCommande(){
 
+  let total = 0;
+  let fraisLivraison = 0;
+
+  produits.forEach((produit, index) => {
+    if (quantites[index] > 0) {
+      total += produit.prix * quantites[index];
+    }
+  });
+
+  if(total === 0){
+    alert("Veuillez sélectionner au moins un produit.");
+    return;
+  }
+
+  let mode = document.getElementById("mode").value;
+  let zone = document.getElementById("zone").value;
+
+  if(mode === "Livraison"){
+
+    if(zone === ""){
+      alert("Veuillez sélectionner votre zone de livraison.");
+      return;
+    }
+
+    fraisLivraison = Number(zone);
+  }
+
+  const montantFinal = total + fraisLivraison;
+
+  try {
+
+    const response = await fetch(
+      "https://divines-app-api.steevyhessouh.workers.dev",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          montant: montantFinal
+        })
+      }
+    );
+
+    const data = await response.json();
+
+    if(data["v1/transaction"] &&
+       data["v1/transaction"].payment_url){
+
+      window.location.href =
+        data["v1/transaction"].payment_url;
+
+    } else {
+
+      alert("Impossible de créer le paiement.");
+
+      console.log(data);
+    }
+
+  } catch(error){
+
+    alert("Erreur de connexion au paiement.");
+
+    console.error(error);
+  }
+  }
 
 function envoyerCommande(){
 
