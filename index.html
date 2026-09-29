@@ -619,7 +619,28 @@ type="text"
 id="adresse"
 placeholder="Obligatoire pour une livraison"
 >
+<label for="zone">📍 Zone de livraison</label>
 
+<select id="zone">
+<option value="">Sélectionnez votre zone</option>
+
+<option value="500">
+Cotonou — Zone proche : 500 F
+</option>
+
+<option value="700">
+Cotonou — Autre zone : 700 F
+</option>
+
+<option value="1000">
+Calavi — Zone proche : 1 000 F
+</option>
+
+<option value="1500">
+Calavi — Zone éloignée : 1 500 F
+</option>
+
+  </select>
 
 <button
 class="order-button"
@@ -1036,7 +1057,9 @@ let nom=
 document.getElementById("nom")
 .value
 .trim();
-
+let zone=
+document.getElementById("zone")
+.value;
 let telephone=
 document.getElementById("telephone")
 .value
@@ -1054,8 +1077,9 @@ document.getElementById("adresse")
 
 let total=0;
 
-let commande="";
+let fraisLivraison=0;
 
+let commande="";
 
 produits.forEach((produit,index)=>{
 
@@ -1090,7 +1114,16 @@ alert(
 return;
 
 }
+if(mode==="Livraison"){
 
+if(zone===""){
+alert("Veuillez sélectionner votre zone de livraison.");
+return;
+}
+
+fraisLivraison=Number(zone);
+
+  }
 
 if(nom===""){
 
@@ -1148,9 +1181,20 @@ adresse+
 
 message+=
 "\n🛒 COMMANDE :\n"+
-commande+
-"\n💰 TOTAL : "+
-total.toLocaleString("fr-FR")+
+commande;
+
+if(mode==="Livraison"){
+
+message+=
+"\n🚚 FRAIS DE LIVRAISON : "+
+fraisLivraison.toLocaleString("fr-FR")+
+" F";
+
+}
+
+message+=
+"\n💰 TOTAL À PAYER : "+
+(total+fraisLivraison).toLocaleString("fr-FR")+
 " F\n\n"+
 "Merci DIVINE'S CAFÉ.";
 
