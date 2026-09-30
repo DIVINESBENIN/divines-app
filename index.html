@@ -1056,7 +1056,7 @@ async function payerCommande(){
     if (quantites[index] > 0) {
       total += produit.prix * quantites[index];
     }
-  });
+  }); 
 
   if(total === 0){
     alert("Veuillez sélectionner au moins un produit.");
@@ -1285,6 +1285,50 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js");
   });
 }
+  const params = new URLSearchParams(window.location.search);
+
+if (params.get("status") === "approved") {
+  document.body.innerHTML = `
+    <div style="
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
+      font-family:Arial,sans-serif;
+    ">
+      <div>
+        <div style="font-size:60px;">✅</div>
+
+        <h1>Paiement réussi !</h1>
+
+        <p>
+          Votre commande DIVINE’S CAFÉ a été confirmée.
+        </p>
+
+        <p>
+          Merci pour votre confiance.
+        </p>
+
+        <button
+          onclick="window.location.href='https://divinesbenin.github.io/divines-app/'"
+          style="
+            padding:14px 24px;
+            border:none;
+            border-radius:8px;
+            background:#000;
+            color:#fff;
+            font-size:16px;
+            cursor:pointer;
+          "
+        >
+          🏠 Retour à l’accueil
+        </button>
+      </div>
+    </div>
+  `;
+  }
 </script>
 </body>
   </html>
